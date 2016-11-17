@@ -1,0 +1,27 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+nav {
+	background-color: blue;
+	float: left;
+	height: 100vh;
+	padding: 2em;
+	/*padding: 5px;*/
+}
+
+.banniere {
+	/* back pour differencier */
+
+	height: 10vh;
+	background-color: red;
+	float: right;
+	background-image: url("image/ban.jpg");
+}
+
+.content {
+	height: 100vh;
+	float: right;
+	padding: 2em;
+}
