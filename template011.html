@@ -55,27 +55,27 @@ permet d'ajouter un grande liste de paquets destiné au reseau nous aurons notem
   </ul>
 
   <h4>conseils avant de demarrer</h4>
-connaitre l'utilité de ffp face a l'utilisation de charecenter, en effet si l'utilisation que vous en faite ne necessite pas ffp rester comme cela.
+<p>connaitre l'utilité de ffp face a l'utilisation de charecenter, en effet si l'utilisation que vous en faite ne necessite pas ffp rester comme cela.
 lire le tuto complet avant de vous lancer
 armez vous des outils demandé
 renseignez vous lisez quelques forum tel que celui-ci tres bien fournie
-avoir preparer la configuration du sharcenter comme expliqué sur cette page
+avoir preparer la configuration du sharcenter comme expliqué sur cette page</p>
 
   <h4>les changement notable au passage a ffp:</h4>
-le serveur web n'est pas disponible dans sharecenter, donc php, mysql, lighttpd n'y sont pas <br>
+<p>le serveur web n'est pas disponible dans sharecenter, donc php, mysql, lighttpd n'y sont pas <br>
 le client p2p: mldonkey apporte une configuration plus poussé <br>
 le serveur de temps: pose probleme (mineur) sur sharecenter <br>
-FFP va un peu ralentir le systeme, sans trop de soucis mais plus lourd que sharecenter <br>
+FFP va un peu ralentir le systeme, sans trop de soucis mais plus lourd que sharecenter <br></p>
 
   <h4>les changement notable au passage de ffp 0.5 a 0.7:</h4>
--le fun-plug.tgz dispo en version ARM (dns 320/325/345 et ch3mnas) <br>
+</p>-le fun-plug.tgz dispo en version ARM (dns 320/325/345 et ch3mnas) <br>
 et en version OARM (dns 323 et ch3snas) <br>
 -nouveau toolchain (gcc 4.5 et current UClibC ) <br>
 ce qui produit une incompatibilitée avec les plugin de la 0.5 <br>
 changement de package funpkg: <br>
 le 0.5 basé en shell script <br>
 le 0.7 en C, le script utilisé porte le nom de "slacker" <br>
-permet une installation via internet (avec "slacker -Ui") <br>
+permet une installation via internet (avec "slacker -Ui") <br></p>
 
   <h4>Documentations: </h4>
 <ul>
@@ -86,8 +86,96 @@ permet une installation via internet (avec "slacker -Ui") <br>
   <li>Forum de Uli/Fonz sur le fun_plug du NAS : <a href="http://forum.dsmg600.info/" >http://forum.dsmg600.info/ </a> </li>
   <li>Forum sur hardware.fr : <a href="http://forum.hardware.fr/hfr/reseauxpersosoho/Reseaux/link-sharecenter-320l-sujet_22398_1.htm"> http://forum.hardware.fr/hfr/reseauxpersosoho/Reseaux/link-sharecenter-320l-sujet_22398_1.htm </a> </li>
   <li>le site de wolf sur le ffp : <a href="http://ffp.wolf-u.li/"> http://ffp.wolf-u.li/ </a> </li>
-</ul>
+  <li>le site nas tweak :  <a href="http://nas-tweaks.net/devices/d-link-dns-320/"> http://nas-tweaks.net/devices/d-link-dns-320/ </a></li>
+  <li>le site testbrunch :  <a href="http://www.techbrunch.fr/tutoriels/prise-en-main-du-nas-dlink-dns-320/"> http://www.techbrunch.fr/tutoriels/prise-en-main-du-nas-dlink-dns-320/ </a> </li>
+  <li>le site nasdestruction :  <a href="http://www.nasdestruction.com/installing-fun-plug-ffp-d-link-dns-320-323-325-323-343-345/"> http://www.nasdestruction.com/installing-fun-plug-ffp-d-link-dns-320-323-325-323-343-345/ </a> </li>
+  <li>le topic de dsmg sur le 0.7 :  <a href="http://forum.dsmg600.info/viewtopic.php?id=6958"> http://forum.dsmg600.info/viewtopic.php?id=6958 </a> </li>
+  <li>technique de pose FFP sur usb:  <a href="http://www.shadowandy.net/2011/12/moving-fonzs-fun_plug-ffp-to-usb.htm"> http://www.shadowandy.net/2011/12/moving-fonzs-fun_plug-ffp-to-usb.htm </a> </li>
+  </ul>
 
+<p>****Contenu de l'archive "Fichiers_pour_DNS-320.zip" 
+***Il s'agit de l'archive qui accompagne ce tutoriel, elle contient différents raccourcis web et les fichiers
+***de configuration nécessaires au DNS-320 pour réaliser les procédures décrites dans ce tutoriel :
+ 
+***»  fun_plug    pour lancer Fun-Plug sur le DNS-320
+***»  config.xml    pour configurer MediaTomb avec la Freebox
+***»  kickwebs_dns320.sh  pour relancer le serveur http interne au DNS-320
+***»  lighttpd.conf-dns320  pour adapter Lighttpd au DNS-320
+***»  mlnet.sh    pour adapter MLDonkey au DNS-320
+***»  fun_plug.local    pour fixer l’horloge du DNS-320
+***»  fun_plug    pour supprimer l’installation de Fun-Plug
+ 
+***Mot de passe de l’archive : eck0
+***NBje referais peut-etre une archive avec les outils complet dedans et voir pour une reecriture de quelques elements qui bug</p>
+
+<h4>Outils nécessaires </h4> 
+  <p>Le NAS, modèle DNS-320 uniquement et parfaitement fonctionnel 
+- nous ne garantissons pas le résultat avec d'autres modèles 
+
+  Un PC sous Windows (XP, Vista, Seven) - les utilisateurs sous linux sauront adapter ce tutoriel
+  L'Archive qui accompagne ce tutoriel (contient les fichiers de config adaptés au DNS-320) 
+
+  Fun-Plug (v0.7) (le cœur du sujet)
+  Téléchargeable ici : http://www.inreto.de/dns323/fun-plug/0.7/  ou funplug ; funplug.tgz
+  Packs supplementaires pour le funplug 0.7: http://downloads.zyxel.nas-central.org/Users/Mijzelf/FFP-Stick/packages/0.7/
+
+  PuTTY (la console de communication avec le NAS) 
+  Téléchargeable ici : http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html  ou ici
+
+  FileZilla (le client FTP pour échanger les fichiers avec le NAS) 
+  Téléchargeable ici : http://filezilla-project.org/download.php  ou ici
+
+  Notepad ++ (l'éditeur de fichiers au format Unix, compatible avec le NAS) 
+  Téléchargeable ici : http://notepad-plus-plus.org/fr/download/  ou ici
+
+  Firefox (le navigateur internet qui respecte les standards du W3C) 
+  Téléchargeable ici : http://www.mozilla-europe.org/fr/ ou ici</p>
+
+1.  Mise en route
+A  partir  de  maintenant  nous  considérons  pour  acquit  que  votre  NAS  est  parfaitement  paramétré*,
+qu’il s’agit bien du modèle DNS-320,  que  vous  en  connaissez  son  adresse  IP  et  que  vous  avez à
+disposition  tous  les  outils  nécessaires  à  la  réalisation  de  ce  hack.  Dans  le  cas  contraire, 
+concentrez-vous d’abord sur ces points avant de poursuivre.
+* la configuration initiale du NAS a été exécutée complètement. Si ce n’est pas le cas, commencez par
+suivre le manuel officiel de votre NAS. (cf. section « liens utiles »)
+Pour les besoins de ce tutoriel, nous considérons l’adresse IP 192.168.1.32 comme l’adresse IP  du
+NAS. Lorsqu’elle sera citée dans ce tutoriel, n’oubliez pas de la corriger par l’adresse IP réelle de
+votre NAS.
+Commencez par démarrer votre navigateur (Firefox recommandé) et ouvrez cette page :
+http://192.168.1.32 ou http://localhost
+l'adresse ip est differente selon votr config, expliquer sur les precedentes pages
+Le  navigateur  doit  vous  inviter  à  vous  connecter  aux  pages  de  configuration  de  votre  NAS.
+Connectez-vous avec le compte « Admin ».
+Assurez-vous  de  n’avoir  programmé  aucune  sauvegarde  à  distance,  sans  quoi  vous  pourriez
+rencontrer des soucis dans le déroulement de ce tutoriel.
+NB: ici rien de speciale vous avez vu comment y acceder dans les pages precedentes.
+
+1.1  Inst allation  de F un-Pl ug
+Téléchargez les deux fichiers nécessaires à l’installation de Fun-Plug pour le DNS-320 :
+  fun_plug.tgz (c’est une archive TAR de 10Mo)
+-  ici : http://www.inreto.de/dns323/fun-plug/0.5/fun_plug.tgz ou ici
+  fun_plug (c’est un fichier texte, sans extension)
+-  ici : http://wolf-u.li/u/171/  ou ici
+-  ou dans le dossier « 1.Fun-Plug » de l’archive qui accompagne ce tutoriel. 
+ensuite nous allons copier ces fichiers dns le ravine du disque 1 et ici 3 methode s'offre a nous:
+Methode 1
+Parcourez le contenu du NAS par l’explorateur Windows  (touche Windows + R) avec cette adresse :
+\\192.168.1.32
+methode 2
+par le share center dans firefox taper
+192.168.1.32
+on tombera dans application/ fileserver / disque 1
+methode 3
+par FTP
+Puis copiez les deux fichiers directement dans le dossier Volume_1, ne créez pas de sous dossier.
+Fun-Plug sera exécuté au prochain redémarrage du NAS, redémarrez donc votre NAS
+
+ASTUCE N°1 :   Deux manières de redémarrer le NAS
+  Par « l’hardware » : maintenez simplement le bouton power appuyé pendant
+5 secondes puis relâchez.
+  Par « le software » : connectez-vous en Admin à l’interface de config du NAS,
+la commande se situe sous la flèche tournée vers le bas, en haut à droite de
+l’écran. (firmware 2.0)
 </div>
   </div>
 </div>
