@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>FFP</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="row">
-       <div class="col-sm-10 banniere">
-BANIIERE</div>
+       <header>
+<h1>BANIIERE</h1>
+        </header>
   <!-- louais a la base j'ai un nav class et ca colle le texte du content tout en ba s c pas normal -->
     <nav class="col-sm-2 nav">
 on pourrais INCLUDE php pour l include
@@ -18,7 +17,7 @@ coller un background general serais plus simple</nav>
 
 
     <div class="col-sm-10 content">
-<h2> dns320 :Fonz Fun Plug 0.7 (FFP)</h2>
+<h1> dns320 :Fonz Fun Plug 0.7 (FFP)</h1>
 
 
 ici nousparlerons du fonz fun plug (FFP) en version 0.7
@@ -39,7 +38,7 @@ téléchargement, installation, mise à jour, paramétrage, exécution et mise e
 sans besoin de reinstaller windows ou linux^^ ,disposant d'un mode raid1 permet de securisé les données suite a l'hypothetique crash d'un disque
 offre generalement des fonctions de sauveguarde automatique. </p>
 
-  <h3>Le fonz fun plug:</h3>
+  <h2>Le fonz fun plug:</h2>
 
 il s'agit d'une interface console gerant les plug-in, pas tout a fait une distribution celui-ci
 permet d'ajouter un grande liste de paquets destiné au reseau nous aurons notemment <br>
@@ -54,7 +53,7 @@ permet d'ajouter un grande liste de paquets destiné au reseau nous aurons notem
     <li>et d'autes paquets.</li>
   </ul>
 
-  <h4>conseils avant de demarrer</h4>
+  <h3>conseils avant de demarrer</h3>
 <p>connaitre l'utilité de ffp face a l'utilisation de charecenter, en effet si l'utilisation que vous en faite ne necessite pas ffp rester comme cela.
 lire le tuto complet avant de vous lancer
 armez vous des outils demandé
@@ -77,7 +76,7 @@ le 0.5 basé en shell script <br>
 le 0.7 en C, le script utilisé porte le nom de "slacker" <br>
 permet une installation via internet (avec "slacker -Ui") <br></p>
 
-  <h4>Documentations: </h4>
+  <h3>Documentations: </h3>
 <ul>
   <li> FTPs de D-Link : France / Pologne / US </li>
   <li>Support technique Dlink (doc/firmware/utilitaires) : dns-320  / dns-325 </li>
@@ -97,87 +96,88 @@ permet une installation via internet (avec "slacker -Ui") <br></p>
 ***Il s'agit de l'archive qui accompagne ce tutoriel, elle contient différents raccourcis web et les fichiers
 ***de configuration nécessaires au DNS-320 pour réaliser les procédures décrites dans ce tutoriel :
  
-***»  fun_plug    pour lancer Fun-Plug sur le DNS-320
-***»  config.xml    pour configurer MediaTomb avec la Freebox
-***»  kickwebs_dns320.sh  pour relancer le serveur http interne au DNS-320
-***»  lighttpd.conf-dns320  pour adapter Lighttpd au DNS-320
-***»  mlnet.sh    pour adapter MLDonkey au DNS-320
-***»  fun_plug.local    pour fixer l’horloge du DNS-320
-***»  fun_plug    pour supprimer l’installation de Fun-Plug
- 
-***Mot de passe de l’archive : eck0
+***»  fun_plug    pour lancer Fun-Plug sur le DNS-320<br>
+***»  config.xml    pour configurer MediaTomb avec la Freebox<br>
+***»  kickwebs_dns320.sh  pour relancer le serveur http interne au DNS-320<br>
+***»  lighttpd.conf-dns320  pour adapter Lighttpd au DNS-320<br>
+***»  mlnet.sh    pour adapter MLDonkey au DNS-320<br>
+***»  fun_plug.local    pour fixer l’horloge du DNS-320<br>
+***»  fun_plug    pour supprimer l’installation de Fun-Plug<br>
+***Mot de passe de l’archive : eck0<br>
 ***NBje referais peut-etre une archive avec les outils complet dedans et voir pour une reecriture de quelques elements qui bug</p>
 
-<h4>Outils nécessaires </h4> 
-  <p>Le NAS, modèle DNS-320 uniquement et parfaitement fonctionnel 
+<h3>Outils nécessaires </h3> 
+  <p>Le NAS, modèle DNS-320 uniquement et parfaitement fonctionnel <br>
 - nous ne garantissons pas le résultat avec d'autres modèles 
+<ul>
+  <li>Un PC sous Windows (XP, Vista, Seven) - les utilisateurs sous linux sauront adapter ce tutoriel<br>
+  L'Archive qui accompagne ce tutoriel (contient les fichiers de config adaptés au DNS-320) </li>
 
-  Un PC sous Windows (XP, Vista, Seven) - les utilisateurs sous linux sauront adapter ce tutoriel
-  L'Archive qui accompagne ce tutoriel (contient les fichiers de config adaptés au DNS-320) 
+ <li> Fun-Plug (v0.7) (le cœur du sujet)<br>
+  Téléchargeable ici : http://www.inreto.de/dns323/fun-plug/0.7/  ou funplug ; funplug.tgz<br>
+  Packs supplementaires pour le funplug 0.7: http://downloads.zyxel.nas-central.org/Users/Mijzelf/FFP-Stick/packages/0.7/</li>
 
-  Fun-Plug (v0.7) (le cœur du sujet)
-  Téléchargeable ici : http://www.inreto.de/dns323/fun-plug/0.7/  ou funplug ; funplug.tgz
-  Packs supplementaires pour le funplug 0.7: http://downloads.zyxel.nas-central.org/Users/Mijzelf/FFP-Stick/packages/0.7/
+  <li>PuTTY (la console de communication avec le NAS) <br>
+  Téléchargeable ici : http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html  ou ici</li>
 
-  PuTTY (la console de communication avec le NAS) 
-  Téléchargeable ici : http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html  ou ici
+  <li>FileZilla (le client FTP pour échanger les fichiers avec le NAS) <br>
+  Téléchargeable ici : http://filezilla-project.org/download.php  ou ici</li>
 
-  FileZilla (le client FTP pour échanger les fichiers avec le NAS) 
-  Téléchargeable ici : http://filezilla-project.org/download.php  ou ici
+  <li>Notepad ++ (l'éditeur de fichiers au format Unix, compatible avec le NAS) <br>
+  Téléchargeable ici : http://notepad-plus-plus.org/fr/download/  ou ici</li>
 
-  Notepad ++ (l'éditeur de fichiers au format Unix, compatible avec le NAS) 
-  Téléchargeable ici : http://notepad-plus-plus.org/fr/download/  ou ici
+  <li>Firefox (le navigateur internet qui respecte les standards du W3C) <br>
+  Téléchargeable ici : http://www.mozilla-europe.org/fr/ ou ici </li> </p>
+</ul>
 
-  Firefox (le navigateur internet qui respecte les standards du W3C) 
-  Téléchargeable ici : http://www.mozilla-europe.org/fr/ ou ici</p>
+<h3>1.  Mise en route</h3>
 
-1.  Mise en route
-A  partir  de  maintenant  nous  considérons  pour  acquit  que  votre  NAS  est  parfaitement  paramétré*,
+  <p>A  partir  de  maintenant  nous  considérons  pour  acquit  que  votre  NAS  est  parfaitement  paramétré*,
 qu’il s’agit bien du modèle DNS-320,  que  vous  en  connaissez  son  adresse  IP  et  que  vous  avez à
 disposition  tous  les  outils  nécessaires  à  la  réalisation  de  ce  hack.  Dans  le  cas  contraire, 
-concentrez-vous d’abord sur ces points avant de poursuivre.
+concentrez-vous d’abord sur ces points avant de poursuivre.<br>
 * la configuration initiale du NAS a été exécutée complètement. Si ce n’est pas le cas, commencez par
-suivre le manuel officiel de votre NAS. (cf. section « liens utiles »)
+suivre le manuel officiel de votre NAS. (cf. section « liens utiles »)<br>
 Pour les besoins de ce tutoriel, nous considérons l’adresse IP 192.168.1.32 comme l’adresse IP  du
 NAS. Lorsqu’elle sera citée dans ce tutoriel, n’oubliez pas de la corriger par l’adresse IP réelle de
-votre NAS.
+votre NAS.<br>
 Commencez par démarrer votre navigateur (Firefox recommandé) et ouvrez cette page :
-http://192.168.1.32 ou http://localhost
+http://192.168.1.32 ou http://localhost<br>
 l'adresse ip est differente selon votr config, expliquer sur les precedentes pages
 Le  navigateur  doit  vous  inviter  à  vous  connecter  aux  pages  de  configuration  de  votre  NAS.
-Connectez-vous avec le compte « Admin ».
+Connectez-vous avec le compte « Admin ».<br>
 Assurez-vous  de  n’avoir  programmé  aucune  sauvegarde  à  distance,  sans  quoi  vous  pourriez
-rencontrer des soucis dans le déroulement de ce tutoriel.
-NB: ici rien de speciale vous avez vu comment y acceder dans les pages precedentes.
+rencontrer des soucis dans le déroulement de ce tutoriel.<br>
+NB: ici rien de speciale vous avez vu comment y acceder dans les pages precedentes.<p>
 
-1.1  Inst allation  de F un-Pl ug
-Téléchargez les deux fichiers nécessaires à l’installation de Fun-Plug pour le DNS-320 :
-  fun_plug.tgz (c’est une archive TAR de 10Mo)
--  ici : http://www.inreto.de/dns323/fun-plug/0.5/fun_plug.tgz ou ici
-  fun_plug (c’est un fichier texte, sans extension)
+<h3>1.1  Installation  de Fun-Plug</h3>
+<p>Téléchargez les deux fichiers nécessaires à l’installation de Fun-Plug pour le DNS-320 :
+<ul>
+  <li>fun_plug.tgz (c’est une archive TAR de 10Mo)<br>
+-  ici : http://www.inreto.de/dns323/fun-plug/0.5/fun_plug.tgz ou ici </li>
+  <li>fun_plug (c’est un fichier texte, sans extension)<br>
 -  ici : http://wolf-u.li/u/171/  ou ici
--  ou dans le dossier « 1.Fun-Plug » de l’archive qui accompagne ce tutoriel. 
-ensuite nous allons copier ces fichiers dns le ravine du disque 1 et ici 3 methode s'offre a nous:
-Methode 1
-Parcourez le contenu du NAS par l’explorateur Windows  (touche Windows + R) avec cette adresse :
-\\192.168.1.32
-methode 2
-par le share center dans firefox taper
-192.168.1.32
-on tombera dans application/ fileserver / disque 1
-methode 3
-par FTP
+-  ou dans le dossier « 1.Fun-Plug » de l’archive qui accompagne ce tutoriel. </li>
+</ul>
+ensuite nous allons copier ces fichiers dns le ravine du disque 1 et ici 3 methode s'offre a nous:<br>
+Methode 1<br>
+Parcourez le contenu du NAS par l’explorateur Windows  (touche Windows + R) avec cette adresse :<br>
+\\192.168.1.32<br>
+methode 2<br>
+par le share center dans firefox taper<br>
+192.168.1.32<br>
+on tombera dans application/ fileserver / disque 1<br>
+methode 3<br>
+par FTP<br>
 Puis copiez les deux fichiers directement dans le dossier Volume_1, ne créez pas de sous dossier.
-Fun-Plug sera exécuté au prochain redémarrage du NAS, redémarrez donc votre NAS
+Fun-Plug sera exécuté au prochain redémarrage du NAS, redémarrez donc votre NAS<br>
 
-ASTUCE N°1 :   Deux manières de redémarrer le NAS
-  Par « l’hardware » : maintenez simplement le bouton power appuyé pendant
-5 secondes puis relâchez.
-  Par « le software » : connectez-vous en Admin à l’interface de config du NAS,
+ASTUCE N°1 :   Deux manières de redémarrer le NAS<br>
+  Par « l’hardware » : maintenez simplement le bouton power appuyé pendant<br>
+5 secondes puis relâchez.<br>
+  Par « le software » : connectez-vous en Admin à l’interface de config du NAS,<br>
 la commande se situe sous la flèche tournée vers le bas, en haut à droite de
-l’écran. (firmware 2.0)
-</div>
-  </div>
+l’écran. (firmware 2.0)<p>
 </div>
 </body>
 </html>

@@ -6,14 +6,15 @@ body {
 nav {
 	background-color: blue;
 	float: left;
-	height: 100vh;
+	width: 10% ;
+	height: 100vh ;
 	padding: 2em;
 	/*padding: 5px;*/
 }
 
-.banniere {
+header {
 	/* back pour differencier */
-
+	width: 100% ;
 	height: 10vh;
 	background-color: red;
 	float: right;
@@ -21,7 +22,8 @@ nav {
 }
 
 .content {
-	height: 100vh;
+	width: 80% ;
+	height: 90vh;
 	float: right;
 	padding: 2em;
 }
