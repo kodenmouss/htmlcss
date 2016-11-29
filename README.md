@@ -15,3 +15,15 @@
 
 
 pour le texte, il faut l'aerer et le presenter, pas la peine de revenir a la ligne a chaque fois, mais les paragraphes doivent etre assez cours sinon cela produit un bloc illisible.
+
+
+rendre le code plus visible, comme un fond de terminal dans une fenetre scrollé
+
+ajouter un detail: ajout d'information spoilé, afin de reduire la page et un rappel sur de quoi on parle
+                   par exemple un code sur la connesion ssh.
+
+rectifier le menu php, qui montre le code array
+
+avoir le menu toujours accessible, si on scroll la page.
+
+voir pour la gestion sur differents ecran avec possibilitée de virer le mneu, de le caché.
