@@ -19,8 +19,6 @@
     }
   }
 
-  var_dump($menu);
-
   echo '<a href="index.php">Index</a>';
 
   foreach ($menu as $keyword => $titles) {
